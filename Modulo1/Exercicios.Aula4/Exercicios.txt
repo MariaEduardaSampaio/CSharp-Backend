@@ -1,0 +1,41 @@
+Tente fazer utilizando as melhores práticas
+
+Exercicio 01:
+Crie um array de números inteiros e exiba todos os elementos na tela.
+
+Exercicio 02 (analise do framework):
+Cri um projeto console, construa uma array de numeros ou string, adicione a ele dados e 
+descubra os principais métodos e propriedade do Array em C#.
+
+Exercicio 03:
+Implemente uma função que busca por um elemento em um array/lista 
+e retorna a posição ou -1 se não encontrado.
+
+Exercício 04: 
+Faça um algoritmo que construa dois vetores A e B de 10 elementos e,
+a partir deles, crie um vetor C, composto pela somados elementos, sendo: 
+
+C[1] = A[1] + B[9], C[2] = A[2] + B[9], C[3] = A[3] + B[8], etc.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+EXERCÍCIO 05
+
+Crie um programa que peça 10 números inteiros
+e apresente a média, a soma e o menor.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+EXERCÍCIO 06
+
+Some os números de 1 a 100 a imprima o valor.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+EXERCÍCIO 07
+
+Faça um algoritmo que leia números até o usuário digitar 0, após
+finalizar, mostre quantos números lidos, a soma e quantos são pares.
+
+Exercicio (Avançado)
+Implemente um algoritmo de ordenação personalizado para ordenar um array.

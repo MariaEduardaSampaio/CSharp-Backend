@@ -1,0 +1,9 @@
+
+
+1 - Escreva uma função que receba uma matriz de inteiros e retorne a soma de todos os elementos.
+
+2 - Crie uma função que verifique se uma matriz quadrada é uma matriz identidade. Uma matriz identidade tem todos os elementos diagonais iguais a 1 e os elementos não diagonais iguais a 0.
+
+3 - Escreva uma função que realize a multiplicação de duas matrizes. Certifique-se de verificar se as matrizes são compatíveis para a multiplicação.
+
+4 - Implemente uma função que calcule a soma de cada linha e coluna de uma matriz bidimensional e retorne os resultados.

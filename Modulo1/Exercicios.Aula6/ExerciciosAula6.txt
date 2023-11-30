@@ -1,0 +1,16 @@
+
+
+
+Exercício de Dicionário 1 - Dado um array de inteiros determine qual número que mais se repete:
+Array: 
+int[] arrayDeInteiros = new int[] { 1, 1, 8, 8, 0, 5, 5, 5, 8, 3, 8, 3, 10 }
+NOTA: Use dicionário para isso!!!
+
+Exercício de Dicionário 2 - Crie dicionários de forma que o usuário possa selecionar entre vários idiomas para exibição dos textos do programa.
+
+Exercício de Dicionário 3 - Analise os métodos dentro de um dicionário
+
+Desafio:
+Como interar em dicionario?
+Monte um dicionario e faça uma interação
+

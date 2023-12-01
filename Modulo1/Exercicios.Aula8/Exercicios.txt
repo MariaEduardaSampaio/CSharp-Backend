@@ -1,0 +1,5 @@
+1 - Implemente uma função que aceite um Array e um índice. A função deve retornar o elemento na posição especificada ou lançar uma exceção se o índice estiver fora do intervalo.
+
+2 - Crie uma função que aceite uma senha do usuário e aplique algumas regras de validação (comprimento mínimo, presença de números, etc.). Lance exceções para senhas que não atendem aos critérios.
+
+3 - Crie uma função que aceite uma string do usuário e tente convertê-la para um número inteiro. Se a conversão não for bem-sucedida, lance uma exceção.

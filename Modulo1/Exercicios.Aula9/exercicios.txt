@@ -1,0 +1,8 @@
+
+#REF
+1 - Escreva uma função que recebe dois números inteiros e os troca utilizando parâmetros ref. 
+Em seguida, crie um programa principal que chama essa função, exibindo os valores antes e depois da troca.
+
+#OUT
+2 - Implemente uma função que calcula a divisão e o resto de dois números inteiros. Utilize parâmetros out para retornar os resultados. 
+Crie um programa principal que chama essa função, passa os números e exibe os resultados.

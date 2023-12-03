@@ -58,7 +58,10 @@
                         opcaoValida = int.TryParse(Console.ReadLine(), out option);
                     } while (!opcaoValida);
                 } while (option != 0);
-            } catch (Exception e)
+            } catch (SenhaMenorQue8Caracteres e)
+            {
+                Console.WriteLine($"Senha inválida: {e}");
+            } catch( Exception e )
             {
                 Console.WriteLine($"Ocorreu um erro: {e}");
             }

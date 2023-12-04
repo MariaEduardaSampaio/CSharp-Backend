@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ada.AulaExtra", "Ada.AulaExtra\Ada.AulaExtra.csproj", "{8AFE64BC-19D1-48B0-AC96-BFC2239AAE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEx.GestaoDeProduto.Compartilhado", "AEx.GestaoDeProduto.Compartilhado\AEx.GestaoDeProduto.Compartilhado.csproj", "{B747B505-A66B-4875-8EF8-2CB57C97BB47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AFE64BC-19D1-48B0-AC96-BFC2239AAE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFE64BC-19D1-48B0-AC96-BFC2239AAE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFE64BC-19D1-48B0-AC96-BFC2239AAE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFE64BC-19D1-48B0-AC96-BFC2239AAE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B747B505-A66B-4875-8EF8-2CB57C97BB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B747B505-A66B-4875-8EF8-2CB57C97BB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B747B505-A66B-4875-8EF8-2CB57C97BB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B747B505-A66B-4875-8EF8-2CB57C97BB47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0ED3318E-3410-4AD9-A0B9-478BD820B519}
+	EndGlobalSection
+EndGlobal

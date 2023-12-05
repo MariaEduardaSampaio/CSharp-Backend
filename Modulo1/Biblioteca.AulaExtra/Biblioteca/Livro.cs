@@ -10,14 +10,18 @@ namespace Biblioteca
     {
         public string Titulo;
         public string[] Autor;
-        public int AnoDePublicacao { get; set; }
-        public int Paginas { get; set; }
+        public string Genero;
+        public int AnoDePublicacao;
+        public int Paginas;
+        public bool Disponivel;
 
-        public Livro(string titulo, string[] autor, int anoDePublicacao, int paginas) { 
-            Titulo = titulo;
-            Autor = autor;
-            AnoDePublicacao = anoDePublicacao;
-            Paginas = paginas;
+        public Livro(string titulo, string[] autor, string genero, int anoDePublicacao, int paginas) { 
+            SetTitulo(titulo);
+            SetAutor(autor);
+            SetGenero(genero);
+            SetAnoDePublicacao(anoDePublicacao);
+            SetPaginas(paginas);
+            SetDisponibilidade(true);
         }
         public string GetTitulo()
         {
@@ -43,5 +47,55 @@ namespace Biblioteca
             else
                 Console.WriteLine("O livro deve ter ao menos um autor.");
         }
+
+        public int GetAnoDePublicacao()
+        {
+            return AnoDePublicacao;
+        }
+
+        public void SetAnoDePublicacao(int anoDePublicacao)
+        {
+            if (anoDePublicacao <= 0)
+                Console.WriteLine("Ano de publicação de livro é inválido.");
+            else
+                AnoDePublicacao = anoDePublicacao;
+        }
+
+        public int GetPaginas()
+        {
+            return Paginas;
+        }
+
+        public void SetPaginas(int paginas)
+        {
+            if (paginas <= 0)
+                Console.WriteLine("Número de páginas deve ser maior que 0.");
+            else 
+                Paginas = paginas;
+        }
+
+        public bool GetDisponibilidade()
+        {
+            return Disponivel;
+        }
+
+        public void SetDisponibilidade(bool disponivel)
+        {
+            Disponivel = disponivel;
+        }
+
+        public string GetGenero()
+        {
+            return Genero;
+        }
+
+        public void SetGenero(string genero)
+        {
+            if (genero.Trim().Length > 0 || genero != null)
+                Genero = genero;
+            else
+                Console.WriteLine("Gênero inválido.");
+        }
+
     }
 }

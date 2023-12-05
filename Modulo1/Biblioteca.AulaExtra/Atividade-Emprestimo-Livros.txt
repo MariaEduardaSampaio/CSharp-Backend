@@ -1,0 +1,34 @@
+**Crie um programa que simule o empréstimo de livros**
+
+
+Utilize listas para representar os livros disponíveis e os livros emprestados.
+Use dicionários para armazenar informações sobre os livros, como título, autor, ano de publicação, etc.
+
+Implemente tratamento de exceções para lidar com situações como tentativa de empréstimo de um livro já emprestado, tentativa de devolução de um livro que não foi emprestado, etc.
+
+Inclua funcionalidade para calcular estatísticas simples, como o número total de livros, número de livros emprestados, número de livros disponíveis, etc.. também pode usar dicionário.
+
+Crie funções que permitam aos usuários consultar os livros disponíveis, emprestar um livro, devolver um livro e adicionar novos livros ao sistema.
+Integre essas funções em um menu interativo para facilitar a interação do usuario com o sistema.
+
+
+- Desafio Extra
+
+Expanda o sistema: adicionar recursos como data de devolução, controle de multas por atraso na devolução, busca por livros por autor ou gênero, entre outros.
+
+Exemplo de dicionário:
+
+Dictionary<string, string> livro01 = new Dictionary<string, string>()
+{
+    {"id", "01"},
+    {"titulo", "Dom Casmurro"},
+    {"autor", "Machado de Assis"},
+    {"anoPublicacao", "1899"},
+    {"genero", "Romance"}
+};
+
+List<Dictionary<string, string>> listaDeLivros = new List<Dictionary<string, string>>()
+{
+    livro01,
+};
+

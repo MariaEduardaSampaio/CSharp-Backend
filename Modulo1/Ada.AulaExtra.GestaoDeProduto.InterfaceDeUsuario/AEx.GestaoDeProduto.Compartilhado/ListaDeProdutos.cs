@@ -2,46 +2,55 @@
 {
     public class ListaDeProdutos
     {
-        //extenção de funcionalidade
-        //ordem da listagem
-        //Filtrar para apenas produtos que comecem com uma ou mais letras
-
-        public List<string> ListarProdutos(string? filtro = null, char? ordenacao = 'n')
+        private List<string> produtos = new List<string>()
         {
-            List<string> produtos = new List<string>()
-            {
-                "Doce de leite",
-                "Leite",
-                "Queijo",
-                "Goiabada",
-                "Suco de Uva",
-                "Iogurte",
-                "Queijadinha",
-                "Cocada",
-                "Coca cola",
-                "Refrigerante",
-                "Cerveja",
-                "Pão",
-                "Limão"
-            };
+            "Doce de leite", "Leite", "Queijo", "Goiabada",
+            "Suco de Uva", "Iogurte", "Queijadinha", "Cocada",
+            "Coca cola", "Refrigerante", "Cerveja", "Pão", "Limão"
+        };
 
+        public List<string> OrdenarProdutos(char ordenacao)
+        {
             if (ordenacao == 'c')
                 produtos = produtos.Order().ToList();
-            
+
             if (ordenacao == 'd')
                 produtos = produtos.OrderDescending().ToList();
 
-            if (filtro != null)
-            {
-                List<string> produtosFiltrados = produtos.Where(produto => produto.StartsWith(filtro)).ToList();
-                return produtosFiltrados;
-            }
-            
             return produtos;
         }
-        //novas funcionalidades
-        //Adicionar Produtos
-        //Alterar Produtos
-        //Remover Produtos
+        public List<string> FiltrarProdutos(string filtro)
+        {
+            List<string> produtosFiltrados = produtos.Where(produto => produto.StartsWith(filtro)).ToList();
+            
+            return produtosFiltrados;
+        }
+        public void ListarProdutos(List<string> produtos)
+        {
+            foreach (string produto in produtos)
+            {
+                Console.WriteLine(produto);
+            }
+        }
+
+        public void AdicionarProduto(string produto)
+        {
+            produtos.Add(produto);
+            Console.WriteLine($"{produto} adicionado com sucesso!");
+        }
+
+        public void AlterarProduto(string produtoAnterior, string produtoAtual)
+        {
+            produtos[produtos.IndexOf(produtoAnterior)] = produtoAtual;
+            Console.WriteLine("Produto alterado com sucesso!");
+        }
+
+        public void RemoverProduto(string produto)
+        {
+            if (produtos.Remove(produto))
+                Console.WriteLine("Produto removido com sucesso!");
+            else
+                Console.WriteLine("Produto não encontrado!");
+        }
     }
 }

@@ -12,17 +12,11 @@ namespace Ada.AulaExtra
         public void Gerar()
         {
             Console.WriteLine("Bem vindo ao sistema de Gestão de Produtos.");
-
+            // falta fazer o menu
             ListaDeProdutos listaDeProdutos = new ListaDeProdutos();
-            List<string> produtosListados = listaDeProdutos.ListarProdutos("C", 'c');
 
-            //Convertendo lista em um só string contendo todos os valores
-            //Console.WriteLine(string.Join("\n", produtosListados));
-
-            foreach (string produto in produtosListados)
-            {
-                Console.WriteLine(produto);
-            }
+            // listaDeProdutos.AlterarProduto("Leite", "Café");
+            List<string> produtosFiltrados = listaDeProdutos.FiltrarProdutos("Co");
         }
     }
 }

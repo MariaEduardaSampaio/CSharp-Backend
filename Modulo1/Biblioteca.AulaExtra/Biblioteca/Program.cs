@@ -10,8 +10,8 @@ namespace Biblioteca
             Console.WriteLine("1 - Adicionar livro.");
             Console.WriteLine("2 - Emprestar livro. ");
             Console.WriteLine("3 - Devolver livro. ");
-            Console.WriteLine("4 - Filtrar livros pelo título. ");
-            Console.WriteLine("5 - Procurar livro específico. ");
+            Console.WriteLine("4 - Procurar livro específico. ");
+            Console.WriteLine("5 - Procurar livros pelo título. ");
             Console.WriteLine("6 - Procurar livros por autor(es).");
             Console.WriteLine("7 - Procurar livros por gênero.");
             Console.WriteLine("8 - Listar todos os livros do acervo. ");
@@ -151,11 +151,11 @@ namespace Biblioteca
                         break;
 
                     case 4:
-                        FiltrarAcervoPorTitulo(biblioteca);
+                        ProcurarLivroEspecifico(biblioteca);
                         break;
 
                     case 5:
-                        ProcurarLivroEspecifico(biblioteca);
+                        FiltrarAcervoPorTitulo(biblioteca);
                         break;
 
                     case 6:

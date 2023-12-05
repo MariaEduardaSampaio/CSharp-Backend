@@ -126,7 +126,7 @@ namespace Biblioteca
             biblioteca.ListarLivro(livro);
             biblioteca.AdicionarLivro(livro);
         }
-        static void Main(string[] args)
+        static void Main()
         {
             int opcao = 100;
             Biblioteca biblioteca = new Biblioteca();

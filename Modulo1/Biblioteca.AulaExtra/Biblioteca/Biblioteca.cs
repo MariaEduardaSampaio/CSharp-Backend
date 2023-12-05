@@ -14,11 +14,11 @@ namespace Biblioteca
         {
             livros = new List<Livro>()
             {
-                new Livro("A Guerra dos Tronos", new string[] { "George R. R. Martin" }, "Fantasia", 1996, 694),
-                new Livro("O Senhor dos Anéis", new string[] { "J. R. R. Tolkien" }, "Fantasia", 1954, 1178),
-                new Livro("1984", new string[] { "George Orwell" }, "Ficção Científica", 1949, 328),
-                new Livro("O Código Da Vinci", new string[] { "Dan Brown" }, "Suspense", 2003, 689),
-                new Livro("Cem Anos de Solidão", new string[] { "Gabriel García Márquez" }, "Ficção", 1967, 417)
+                new Livro("A Guerra dos Tronos", ["George R. R. Martin"], "Fantasia", 1996, 694),
+                new Livro("O Senhor dos Anéis", ["J. R. R. Tolkien"], "Fantasia", 1954, 1178),
+                new Livro("1984", ["George Orwell"], "Ficção Científica", 1949, 328),
+                new Livro("O Código Da Vinci", ["Dan Brown"], "Suspense", 2003, 689),
+                new Livro("Cem Anos de Solidão", ["Gabriel García Márquez"], "Ficção", 1967, 417)
             };
         }
 

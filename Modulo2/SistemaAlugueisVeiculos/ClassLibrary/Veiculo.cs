@@ -75,6 +75,11 @@ namespace ClassLibrary
             this.placa = placa;
         }
 
+        public int GetId()
+        {
+            return idVeiculo;
+        }
+
         public TipoVeiculo GetTipoVeiculo()
         {
             return tipoVeiculo;

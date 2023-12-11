@@ -1,0 +1,34 @@
+Atividade 1 - Pesquisa
+Faça uma pesquisa sobre Polimorfismo, o que é o polimorfismo, como é identificado, tipos de polimorfismo, etc..
+
+
+Atividade 2 - Modelagem
+O objetivo é representar uma sistema de gerenciamento de aluguel de veículos.
+Faça uma modelagem orientada a objetos contendo o seguinte:
+
+- Diagrama de Casos de Uso:
+Identifique os atores principais, como clientes e funcionários, e os casos de uso do sistema, como alugar veículo, registrar cliente, fazer pagamento, etc.
+
+- Diagrama de Classes:
+Represente as principais classes do sistema, como Veículo, Cliente, Funcionário, Reserva, Pagamento, etc., com seus atributos e métodos.
+
+Diagrama de Sequência:
+Ilustre a interação entre os objetos do sistema ao realizar uma reserva de veículo, mostrando as mensagens trocadas entre Cliente, Veículo e Funcionário.
+
+- Diagrama de Estado:
+Represente os diferentes estados de um Veículo (Disponível, Alugado, Em Manutenção) e os eventos que levam a transições entre esses estados.
+
+Links úteis sobre os diagramas:
+https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml
+https://www.lucidchart.com/pages/pt/diagrama-de-caso-de-uso-uml
+https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-sequencia-uml
+https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-maquina-de-estados-uml
+
+Envie o resultado da Atividade 2 - Modelagem para o meu e-mail
+evandrovista@gmail.com
+
+-----------------------------------------------------------------
+
+Tópicos para a próxima aula
+- Introdução ao polimorfismo
+- Atributos, modificadores de acesso e métodos.

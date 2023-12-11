@@ -18,33 +18,39 @@ namespace ClassLibrary
 
         private readonly DateTime diaInicial;
         private DateTime diaFinal;
-        private double precoReserva;
+        private float precoReserva;
         private readonly Cliente cliente;
         private readonly Funcionario funcionario;
         private readonly Veiculo veiculo;
         private EstadoReserva estadoReserva;
         private Pagamento pagamento;
 
-        public Reserva(DateTime diaInicial, DateTime diaFinal, Cliente cliente, Funcionario funcionario, 
-                       Veiculo veiculo, Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public Reserva(DateTime diaInicial, DateTime diaFinal, Cliente cliente, Funcionario funcionario, Veiculo veiculo)
         {
             this.diaInicial = diaInicial;
             this.diaFinal = diaFinal;
-            this.precoReserva = CalcularValorDaReserva(diaInicial, diaFinal);
+            this.precoReserva = 0;
             this.cliente = cliente;
             this.funcionario = funcionario;
             this.veiculo = veiculo;
             this.estadoReserva = EstadoReserva.EmAndamento;
             this.pagamento = null;
-            RealizarPagamento(metodoDePagamentoPorValor);
         }
 
-        public void RealizarPagamento(Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public void RealizarPagamento(Dictionary<MetodoDePagamento, float> metodoDePagamentoPorValor)
         {
             Pagamento pagamento = new Pagamento(precoReserva, metodoDePagamentoPorValor);
             this.pagamento = pagamento;
         }
+        public DateTime GetDataInicial()
+        {
+            return diaInicial;
+        }
 
+        public DateTime GetDataFinal()
+        {
+            return diaFinal;
+        }
         public Cliente GetCliente()
         {
             return cliente; 
@@ -74,13 +80,13 @@ namespace ClassLibrary
             this.estadoReserva = estadoReserva;
         }
 
-        public double CalcularValorDaReserva(DateTime diaInicial, DateTime diaFinal)
+        public float CalcularValorDaReserva(DateTime diaInicial, DateTime diaFinal)
         {
-            TimeSpan duracaoReserva = diaFinal.Subtract(diaInicial); // representa um intervalo de tempo TimeSpan
+            TimeSpan duracaoReserva = diaFinal.Subtract(diaInicial);
 
-            double valorDiario = veiculo.GetAluguelDiario();
-            double valorTotal = duracaoReserva.TotalDays * valorDiario;
-            return valorTotal;
+            precoReserva = (float)(duracaoReserva.TotalDays * veiculo.GetAluguelDiario());
+            
+            return precoReserva;
         }
 
         public void CancelarReserva()

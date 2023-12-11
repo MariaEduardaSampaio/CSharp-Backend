@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ClassLibrary.Pagamento;
 using static ClassLibrary.Reserva;
 using static ClassLibrary.Veiculo;
 
@@ -30,7 +31,7 @@ namespace ClassLibrary
             return cliente;
         }
 
-        public Veiculo AdicionarVeiculo(TipoVeiculo tipoVeiculo, MarcaVeiculo marca, ModeloVeiculo modelo, string placa, bool integridade, EstadoVeiculo estadoDoVeiculo, double precoAluguelDiario)
+        public Veiculo AdicionarVeiculo(TipoVeiculo tipoVeiculo, MarcaVeiculo marca, ModeloVeiculo modelo, string placa, bool integridade, EstadoVeiculo estadoDoVeiculo, float precoAluguelDiario)
         {
             Veiculo veiculoNovo = new Veiculo(tipoVeiculo, marca, modelo, placa, integridade, estadoDoVeiculo, precoAluguelDiario);
             Console.WriteLine("Veículo adicionado com sucesso!");
@@ -41,7 +42,10 @@ namespace ClassLibrary
         public void ReceberVeiculo(Reserva reserva)
         {
             Veiculo veiculo = reserva.GetVeiculo();
-            if (veiculo.GetEstadoVeiculo() == EstadoVeiculo.Alugado && veiculo.GetIntegridadeVeiculo())
+            Pagamento pagamento = reserva.GetPagamento();
+            if (veiculo.GetEstadoVeiculo() == EstadoVeiculo.Alugado 
+                && veiculo.GetIntegridadeVeiculo()
+                && pagamento.GetStatusPagamento() == StatusPagamento.Pago)
             {
                 veiculo.AlterarEstadoVeiculo(EstadoVeiculo.Disponivel);
                 reserva.AlterarEstadoReserva(EstadoReserva.Finalizada);
@@ -53,8 +57,11 @@ namespace ClassLibrary
 
         public void LiberarVeiculo(Reserva reserva)
         {
-            if(reserva.GetPagamento() != null)
+            if(reserva.GetPagamento().GetStatusPagamento() == StatusPagamento.Pago)
+            {
                 Console.WriteLine("Veículo liberado para cliente!");
+                reserva.GetVeiculo().AlterarEstadoVeiculo(EstadoVeiculo.Alugado);
+            }
             else
                 Console.WriteLine("Realize o pagamento da reserva para que o veículo seja liberado!");
         }

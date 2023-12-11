@@ -15,18 +15,17 @@ namespace ClassLibrary
             DinheiroFisico = 3,
             PIX = 4
         }
-
         public enum StatusPagamento
         {
             Pago = 1,
             Cancelado = 2,
             AguardandoPagamento = 3
         }
-        private readonly double precoReserva;
-        private readonly Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor;
+        private readonly float precoReserva;
+        private readonly Dictionary<MetodoDePagamento, float> metodoDePagamentoPorValor;
         private StatusPagamento statusPagamento;
 
-        public Pagamento(double precoReserva, Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public Pagamento(float precoReserva, Dictionary<MetodoDePagamento, float> metodoDePagamentoPorValor)
         {
             this.precoReserva = precoReserva;
             if (ValidarPagamento(metodoDePagamentoPorValor))
@@ -38,14 +37,15 @@ namespace ClassLibrary
                 statusPagamento = StatusPagamento.AguardandoPagamento;
         }
 
-        public Dictionary<MetodoDePagamento, double> GetMetodoDePagamentoPorValor()
+        public Dictionary<MetodoDePagamento, float> GetMetodoDePagamentoPorValor()
         {
             return metodoDePagamentoPorValor;
         }
 
-        public bool ValidarPagamento(Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public bool ValidarPagamento(Dictionary<MetodoDePagamento, float> metodoDePagamentoPorValor)
         {
-            double somaTotalPagamento = 0;
+            float somaTotalPagamento = 0;
+
             foreach (var (metodoDePagamento, valor) in metodoDePagamentoPorValor)
                 somaTotalPagamento += valor;
 
@@ -61,8 +61,8 @@ namespace ClassLibrary
             return false;
         }
 
-        public StatusPagamento GetStatusPagamento() 
-        { 
+        public StatusPagamento GetStatusPagamento()
+        {
             return statusPagamento;
         }
 

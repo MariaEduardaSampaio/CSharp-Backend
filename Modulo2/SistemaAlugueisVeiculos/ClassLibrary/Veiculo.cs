@@ -46,9 +46,9 @@ namespace ClassLibrary
         private string placa;
         private bool integridade;
         private EstadoVeiculo estadoDoVeiculo;
-        private readonly double precoAluguelDiario;
+        private readonly float precoAluguelDiario;
 
-        public Veiculo(TipoVeiculo tipoVeiculo, MarcaVeiculo marca, ModeloVeiculo modelo, string placa, bool integridade, EstadoVeiculo estadoDoVeiculo, double precoAluguelDiario)
+        public Veiculo(TipoVeiculo tipoVeiculo, MarcaVeiculo marca, ModeloVeiculo modelo, string placa, bool integridade, EstadoVeiculo estadoDoVeiculo, float precoAluguelDiario)
         {
             this.idVeiculo = contadorIdVeiculo++;
             this.tipoVeiculo = tipoVeiculo;
@@ -100,7 +100,7 @@ namespace ClassLibrary
             return placa;
         }
 
-        public double GetAluguelDiario()
+        public float GetAluguelDiario()
         {
             return precoAluguelDiario;
         }

@@ -38,9 +38,8 @@ namespace ClassLibrary
             }
         }
 
-        public Reserva AdicionarReserva(DateTime diaInicial, DateTime diaFinal, Cliente cliente, Funcionario funcionario, Veiculo veiculo, Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public Reserva AdicionarReserva(Reserva reserva)
         {
-            Reserva reserva = new(diaInicial, diaFinal, cliente, funcionario, veiculo, metodoDePagamentoPorValor);
             reservas.Add(reserva);
             return reserva;
         }
@@ -57,7 +56,7 @@ namespace ClassLibrary
                 Console.WriteLine("Não existem reservas ativas deste veículo vinculadas ao cliente.");
         }
 
-        public void RealizarPagamento(Dictionary<MetodoDePagamento, double> metodoDePagamentoPorValor)
+        public void RealizarPagamento(Dictionary<MetodoDePagamento, float> metodoDePagamentoPorValor)
         {
             Reserva reservaNaoPaga = reservas.FirstOrDefault(reserva => reserva.GetPagamento() == null);
             if (reservaNaoPaga != null)

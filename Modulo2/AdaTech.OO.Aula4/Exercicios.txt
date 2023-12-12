@@ -1,0 +1,6 @@
+
+Exercícios:
+
+1 - Implementar um novo extrato no projeto da aula de extrato, por exemplo: Extrato RendaFixa, Extrato Emprestimos.
+2 - Melhorar o código no projeto da aula, adicionando coisas sobre: encapsulamento, getters e setters
+3 - Pesquisar e Ler sobre padrões GRASP
